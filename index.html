@@ -3,12 +3,18 @@
 <head>
 <script>
 var input = document.getElementById("Textfield")
+var sqrt_sym = "√"
+var currentval = input.value()
 function resetText() {
     input.value = ""
+}
+function update() {
+    document.getElementById("Textfield").value=currentval+ "√";
 }
 </script>
 <title> FunctionID </title>
 <body>
+<button onclick="update()">√</button>
 <form>
 <p style="display:inline">Enter Equ:</p>
 <input type="text" name="theequ" style="display:inline" id="Textfield">
