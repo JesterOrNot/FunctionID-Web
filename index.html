@@ -3,6 +3,9 @@
 <head>
 <script>
 var input = document.getElementById("Textfield")
+function resetText() {
+    input.value = ""
+}
 </script>
 <title> FunctionID </title>
 <body>
@@ -10,7 +13,7 @@ var input = document.getElementById("Textfield")
 <p style="display:inline">Enter Equ:</p>
 <input type="text" name="theequ" style="display:inline" id="Textfield">
 <button id="submit">Submit</button>
-<button id="reset">Reset</button>
+<button onclick = resetText() id="reset">Reset</button>
 </form>
 </body>
 </html>
