@@ -26,10 +26,10 @@ function update() {
 function submitbutton() {
     item = input.value
     input.value = ""
-    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*/g
-    x = item.test(regex1)
+    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*/
+    x = regex1.test(item)
     if (x==true) {
-        document.getElementById("theitem").innerHTML = 'It is quadratic';
+        alert("quadratic function")
     }
 }
 </script>
