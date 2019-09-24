@@ -3,9 +3,7 @@
 <head>
 <title> FunctionID </title>
 <body>
-<p id="text" style="color:green;
-                            font-size: 20px;
-                            font-weight: bold;"></p>
+<p id="text"></p>
 <button onclick="update()">√</button>
 <form>
 <p style="display:inline">Enter Equ:</p>
@@ -13,6 +11,7 @@
 <button id="submit" onclick="submitbutton()">Submit</button>
 <button onclick = resetText() id="reset">Reset</button>
 </form>
+<p id="theitem"></p>
 <script>
 var input = document.getElementById("Textfield")
 var text1 = document.getElementById("text");
@@ -27,7 +26,9 @@ function update() {
 function submitbutton() {
     item = input.value
     input.value = ""
-    alert(item)
+    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*/g
+    x = item.match(regex1)
+    document.getElementById("thetem").innerHTML = "hello"
 }
 </script>
 </body>
