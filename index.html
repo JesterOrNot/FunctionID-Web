@@ -27,8 +27,10 @@ function submitbutton() {
     item = input.value
     input.value = ""
     regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*/g
-    x = item.match(regex1)
-    document.getElementById("thetem").innerHTML = "hello"
+    x = item.test(regex1)
+    if (x==true) {
+        document.getElementById("theitem").innerHTML = 'It is quadratic';
+    }
 }
 </script>
 </body>
