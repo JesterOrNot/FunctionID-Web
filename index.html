@@ -37,6 +37,13 @@ function submitbutton() {
     quad8 = /\\(x(?:\\+|-)\\d*\\)\\^2/.test(item)
     // cubic checks
     cubic1 = /\d*x\^3(?:\+|-)\d*x(?:\+|-)\d*|x\^3(?:\+|-)\d*x(?:\+|-)\d*/.test(item)
+    cubic2 = /\d*x\^3(?:\+|-)\d*|x\^3(?:\+|-)\d*/.test(item)
+    cubic3 = /\d*x\^3(?:\+|-)\d*x|x\^3(?:\+|-)\d*x/.test(item)
+    cubic4 = /\d*x\^3(?:\+|-)\d*x|x\^3(?:\+|-)\d*x/.test(item)
+    cubic5 = /\(x(?:\+|-)(\d)*\)\^3((?:\+|-)\d*)/.test(item)
+    cubic6 = /\d*\(x(?:\+|-)(\d)*\)\^3((?:\+|-)\d*)/.test(item)
+    cubic7 = /\d*\(x(?:\+|-)\d*\)\^3/.test(item)
+    cubic8
     // if elif else
     if ( quad1 == true || quad2 == true || quad3 == true || quad4 == true || quad5 == true || quad6 == true || quad7 == true || quad8 == true ) {
         alert("quadratic function")
