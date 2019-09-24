@@ -63,7 +63,7 @@ function submitbutton() {
     cbrt1 = /∛x|\d*∛x/.test(item)
     cbrt2 = /∛x(?:\+|-)\d*|\d*∛x(?:\+|-)\d*/.test(item)
     cbrt3 = /∛x (?:\+|-) \d*|\d*∛x (?:\+|-) \d*/.test(item)
-    cbrt4 = /∛x(?:\\+|-)\\d* (?:\\+|-) \\d*|\\d*∛x(?:\\+|-)\\d* (?:\\+|-) \\d*/.test(item)
+    cbrt4 = /∛x(?:\+|-)\d* (?:\+|-) \d*|\d*∛x(?:\+|-)\d* (?:\+|-) \d*/.test(item)
     // if elif else
     if ( quad1 == true || quad2 == true || quad3 == true || quad4 == true || quad5 == true || quad6 == true || quad7 == true || quad8 == true ) {
         alert("quadratic function")
