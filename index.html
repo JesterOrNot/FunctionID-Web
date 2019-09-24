@@ -26,9 +26,11 @@ function update() {
 function submitbutton() {
     item = input.value
     input.value = ""
-    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*/
-    x = regex1.test(item)
-    if (x==true) {
+    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*|x\^2(?:\+|-)\d*x(?:\+|-)\d*/
+    regex2 = /\\d*x\^2|x\^2/
+    quad1 = regex1.test(item)
+    quad2 = regex2.test(item)
+    if (quad1==true || quad2==true) {
         alert("quadratic function")
     }
 }
