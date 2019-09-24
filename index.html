@@ -26,11 +26,17 @@ function update() {
 function submitbutton() {
     item = input.value
     input.value = ""
-    regex1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*|x\^2(?:\+|-)\d*x(?:\+|-)\d*/
-    regex2 = /\\d*x\^2|x\^2/
-    quad1 = regex1.test(item)
-    quad2 = regex2.test(item)
-    if (quad1==true || quad2==true) {
+    // quad checks
+    quad1 = /\d*x\^2(?:\+|-)\d*x(?:\+|-)\d*|x\^2(?:\+|-)\d*x(?:\+|-)\d*/.test(item)
+    quad2 = /\d*x\^2|x\^2/.test(item)
+    quad3 = /\d*x\^2(?:\+|-)\d*|x\^2(?:\+|-)\d*/.test(item)
+    quad4 = /\d*x\^2(?:\+|-)\d*x|x\^2(?:\+|-)\d*x/.test(item)
+    quad5 = /\(x(?:\+|-)(\d)*\)\^2((?:\+|-)\d*)/.test(item)
+    quad6 = /\d*\(x(?:\+|-)(\d)*\)\^2((?:\+|-)\d*)/.test(item)
+    quad7 = /\d*\(x(?:\+|-)\d*\)\^2/.test(item)
+    quad8 = /\\(x(?:\\+|-)\\d*\\)\\^2/.test(item)
+    // if elif else
+    if ( quad1 == true || quad2 == true || quad3 == true || quad4 == true || quad5 == true || quad6 == true ) {
         alert("quadratic function")
     }
 }
