@@ -5,6 +5,7 @@
 <body>
 <p id="text"></p>
 <button onclick="update()">√</button>
+<button onclick="update2()">∛</button>
 <form>
 <p style="display:inline">Enter Equ:</p>
 <input type="text" style="display:inline" id="Textfield">
@@ -22,6 +23,10 @@ function resetText() {
 function update() {
     text.setAttribute('value', 'defaultValue');
     input.value = input.value + "√";
+}
+function update2() {
+    text.setAttribute('value', 'defaultValue');
+    input.value = input.value + "∛";
 }
 function submitbutton() {
     item = input.value
