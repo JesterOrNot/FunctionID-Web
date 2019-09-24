@@ -35,9 +35,13 @@ function submitbutton() {
     quad6 = /\d*\(x(?:\+|-)(\d)*\)\^2((?:\+|-)\d*)/.test(item)
     quad7 = /\d*\(x(?:\+|-)\d*\)\^2/.test(item)
     quad8 = /\\(x(?:\\+|-)\\d*\\)\\^2/.test(item)
+    // cubic checks
+    cubic1 = /\d*x\^3(?:\+|-)\d*x(?:\+|-)\d*|x\^3(?:\+|-)\d*x(?:\+|-)\d*/.test(item)
     // if elif else
     if ( quad1 == true || quad2 == true || quad3 == true || quad4 == true || quad5 == true || quad6 == true || quad7 == true || quad8 == true ) {
         alert("quadratic function")
+    } else if (cubic1 == true) {
+        alert("cubic function")
     }
 }
 </script>
