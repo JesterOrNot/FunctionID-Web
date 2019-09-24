@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title> FunctionID </title>
+<body>
+<p id="text" style="color:green;
+                            font-size: 20px;
+                            font-weight: bold;"></p>
+<button onclick="update()">√</button>
+<form>
+<p style="display:inline">Enter Equ:</p>
+<input type="text" style="display:inline" id="Textfield">
+<button id="submit" onclick="submitbutton()">Submit</button>
+<button onclick = resetText() id="reset">Reset</button>
+</form>
 <script>
 var input = document.getElementById("Textfield")
+var text1 = document.getElementById("text");
 var sqrt_sym = "√"
-var currentval = input.value()
 function resetText() {
     input.value = ""
 }
 function update() {
-    document.getElementById("Textfield").value=currentval+ "√";
+    text.setAttribute('value', 'defaultValue');
+    input.value = input.value + "√";
+}
+function submitbutton() {
+    item = input.value
+    input.value = ""
+    alert(item)
 }
 </script>
-<title> FunctionID </title>
-<body>
-<button onclick="update()">√</button>
-<form>
-<p style="display:inline">Enter Equ:</p>
-<input type="text" name="theequ" style="display:inline" id="Textfield">
-<button id="submit">Submit</button>
-<button onclick = resetText() id="reset">Reset</button>
-</form>
 </body>
 </html>
