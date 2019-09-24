@@ -54,6 +54,11 @@ function submitbutton() {
     sqrt2 = /√x(?:\+|-)\d*|\d*√x(?:\+|-)\d*/.test(item)
     sqrt3 = /√x (?:\+|-) \d*|\d*√x (?:\+|-) \d*/.test(item)
     sqrt4 = /√x(?:\+|-)\d* (?:\+|-) \d*|\d*√x(?:\+|-)\d* (?:\+|-) \d*/.test(item)
+    // absolute value checks
+    abs1 = /\|x\||\d*\|x\|/.test(item)
+    abs2 = /\|x(?:\+|-)\d*\||\d*\|x(?:\+|-)\d\|*/.test(item)
+    abs3 = /\|x\|(?:\+|-)\d*|\d*\|x\|(?:\+|-)\d*/.test(item)
+    abs4 = /\|x(?:\+|-)\d*\|(?:\+|-)\d*|\d*\|x(?:\+|-)\d*\|(?:\+|-)\d*/.test(item)
     // if elif else
     if ( quad1 == true || quad2 == true || quad3 == true || quad4 == true || quad5 == true || quad6 == true || quad7 == true || quad8 == true ) {
         alert("quadratic function")
@@ -61,6 +66,8 @@ function submitbutton() {
         alert("cubic function")
     } else if (sqrt1 == true || sqrt2 == true || sqrt3 == true || sqrt4 == true) {
         alert("sqrt function")
+    } else if (abs1 == true || abs2 == true || abs3 == true || abs4 == true) {
+        alert("abs val function")
     }
 }
 </script>
